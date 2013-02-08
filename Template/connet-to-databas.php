@@ -10,16 +10,14 @@ if (!$link) {
 }
 echo 'Connected successfully to database server';
 
-$query = mysql_query("SELECT namn FROM test");
-echo "hej\n";
-echo $query;
+mysql_select_db($database);
+
+$query = mysql_query("SELECT * FROM inloggning");
 while ($temp = mysql_fetch_array($query)) {
-	echo $temp["namn"];
-}
-
-mysql_select_db($database="");
-?>
-
-<?php
-   mysql_close($link);
+    echo "<br>";
+	echo $temp["Inloggningsnamn"];
+	echo "<br>";
+	echo $temp["Lösenord"];
+} 
+  mysql_close($link);
 ?>
