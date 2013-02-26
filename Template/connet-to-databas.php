@@ -14,10 +14,12 @@ mysql_select_db($database);
 
 $query = mysql_query("SELECT * FROM inloggning");
 while ($temp = mysql_fetch_array($query)) {
-    echo "<br>";
+    echo "<ul>";
+	echo "<li>";
 	echo $temp["Inloggningsnamn"];
-	echo "<br>";
+	echo "<li>";
 	echo $temp["Lösenord"];
+	echo "</ul>";
 } 
   mysql_close($link);
 ?>
