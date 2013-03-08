@@ -8,8 +8,15 @@
         <title>Skriv namnet på sidan här!</title>	
     </head>
     <body>
-Sidan är gjor av det namn som står längst ner på alla sidor.
-				<p> &copy; 2013 Hampus Sjöman
+	<form metod="POST"
+	action=spelet.php>	
+	<input type="Namn"/>
+	<br />
+	<input type="Namn"/>
+	<br />
+	<input type="Submit"/>
+	</form>
+				<p> &copy; 2013 Hampus Sjöman.
 				</p>
 			</div>
         </div>
